@@ -19,6 +19,17 @@ config = {
         include: SRC
       }
     ]
+  },
+  externals: {
+    // Use more complicated mapping for lodash.
+    // We need to access it differently depending
+    // on the environment.
+    lodash: {
+      commonjs: 'lodash',
+      commonjs2: 'lodash',
+      amd: '_',
+      root: '_'
+    }
   }
 };
 
