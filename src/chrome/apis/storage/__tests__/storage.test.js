@@ -1,6 +1,6 @@
 import Storage from '../index'
 import StorageArea from '../types/storage_area'
-import Signal from '../../../../signal'
+import Signal from '../../../../core/signal'
 
 let storage = null
 

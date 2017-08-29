@@ -3,7 +3,7 @@ import isArray     from 'lodash/isArray'
 import isEmpty     from 'lodash/isEmpty'
 import _           from 'lodash'
 
-import Signal      from '../../../../signal'
+import Signal      from '../../../../core/signal'
 
 // @flow
 class StorageArea {

@@ -1,5 +1,6 @@
 // @flow
-import Signal from '../../../signal'
+
+import Signal from '../../../core/signal'
 import StorageArea from './types/storage_area'
 
 /**
