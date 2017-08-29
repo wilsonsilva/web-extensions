@@ -1,5 +1,7 @@
 import Chrome from './chrome'
+import Firefox from './firefox'
 
 export {
-  Chrome
+  Chrome,
+  Firefox
 }
