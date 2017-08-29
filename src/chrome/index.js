@@ -1,7 +1,8 @@
 // @flow
 
 import {
-  Storage
+  Storage,
+  BrowserAction
 } from './apis'
 
 /**
@@ -9,10 +10,15 @@ import {
  */
 class Chrome {
   storage:Storage
+  browserAction:BrowserAction
 
   constructor() {
     this.storage = new Storage()
+    this.browserAction = new BrowserAction()
   }
 }
 
 export default Chrome
+export {
+  BrowserAction
+}
