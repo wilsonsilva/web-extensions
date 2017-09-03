@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack --watch",
     "clean": "rm -rf ./dist",
-    "build": "webpack -p",
+    "build": "yarn webpack --env build",
     "lint": "eslint src",
     "qa": "yarn eslint src && yarn flow && yarn jest"
   },
