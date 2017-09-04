@@ -2,10 +2,10 @@
   "name": "web-extensions",
   "version": "0.1.0",
   "description": "In-memory API for Web Extensions",
-  "main": "webpack.config.js",
+  "main": "lib/index.js",
   "scripts": {
     "start": "webpack --watch",
-    "clean": "rm -rf ./dist",
+    "clean": "rm -rf ./lib",
     "build": "yarn webpack --env build",
     "lint": "eslint src",
     "qa": "yarn eslint src && yarn flow && yarn jest"

@@ -1,6 +1,6 @@
 const path = require('path')
 const SRC  = path.join(__dirname, 'src')
-const DIST = path.join(__dirname, 'dist')
+const DIST = path.join(__dirname, 'lib')
 
 config = {
   entry: {
@@ -8,8 +8,12 @@ config = {
   },
   output: {
     path: DIST,
-    filename: '[name].bundle.js'
+    filename: 'index.js',
+    library: 'web-extensions',
+    libraryTarget: 'umd',
+    umdNamedDefine: true
   },
+  devtool: 'source-map',
   module: {
     rules: [
       {
