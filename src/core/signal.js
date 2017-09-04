@@ -17,7 +17,7 @@ class Signal {
    *
    * @param {Function} callback The function to be called when an event is dispatched.
    */
-  add(callback:Function) {
+  addListener(callback:Function) {
     this.listeners.push(callback)
   }
 

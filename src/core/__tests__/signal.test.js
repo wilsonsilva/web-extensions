@@ -6,10 +6,10 @@ beforeEach(() => {
   signal = new Signal()
 })
 
-describe('#add', () => {
+describe('#addListener', () => {
   it('adds a callback to the list of listeners', () => {
     const callback = jest.fn()
-    signal.add(callback)
+    signal.addListener(callback)
 
     expect(signal.listeners).toContain(callback)
   })
@@ -19,7 +19,7 @@ describe('#remove', () => {
   const callback = jest.fn()
 
   beforeEach(() => {
-    signal.add(callback)
+    signal.addListener(callback)
   })
 
   it('removes a callback from the list of listeners', () => {
@@ -31,8 +31,8 @@ describe('#remove', () => {
 
 describe('#removeAll', () => {
   beforeEach(() => {
-    signal.add(jest.fn())
-    signal.add(jest.fn())
+    signal.addListener(jest.fn())
+    signal.addListener(jest.fn())
   })
 
   it('removes all callbacks from the list of listeners', () => {
@@ -46,7 +46,7 @@ describe('#dispatch', () => {
   const callback = jest.fn()
 
   beforeEach(() => {
-    signal.add(callback)
+    signal.addListener(callback)
   })
 
   it('calls all listeners', () => {
@@ -61,7 +61,7 @@ describe('#listeners', () => {
   const callback = jest.fn()
 
   beforeEach(() => {
-    signal.add(callback)
+    signal.addListener(callback)
   })
 
   it('exposes all the signal listeners', () => {
