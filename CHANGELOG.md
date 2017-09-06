@@ -51,7 +51,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Chrome's printerProvider API
 - Chrome's privacy API
 - Chrome's proxy API
-- Chrome's runtime API
 - Chrome's sessions API
 - Chrome's system.cpu API
 - Chrome's system.memory API
@@ -71,6 +70,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Chrome's automation dev API
 - Chrome's proccesses dev API
 - Chrome's signedInDevice dev API
+
+## 0.2.0 - 2017-09-06
+### Added
+- Chrome's runtime API
+
+### Changed
+- Rename the `Signal#add` method to `addListener` to comply with Chrome's original API.
+
+## Fixed
+- The loading of the library
 
 ## 0.1.0 - 2017-08-31
 ### Added
