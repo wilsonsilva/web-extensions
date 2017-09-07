@@ -1,5 +1,6 @@
 # Web Extensions
 [![npm version](https://badge.fury.io/js/web-extensions.svg)](https://badge.fury.io/js/web-extensions)
+[![Build Status](https://travis-ci.org/wilsonsilva/web-extensions.svg?branch=master)](https://travis-ci.org/wilsonsilva/web-extensions)
 
 JavaScript in-memory replacement for Web Extensions API. This is in very early stages and I'm updating it as I need
 to test an extension I'm developing.

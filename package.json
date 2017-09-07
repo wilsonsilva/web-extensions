@@ -8,7 +8,8 @@
     "clean": "rm -rf ./lib",
     "build": "yarn webpack --env build",
     "lint": "eslint src",
-    "qa": "yarn eslint src && yarn flow && yarn jest"
+    "qa": "yarn eslint src && yarn flow && yarn jest",
+    "test-ci": "yarn flow && yarn jest"
   },
   "repository": {
     "type": "git",
