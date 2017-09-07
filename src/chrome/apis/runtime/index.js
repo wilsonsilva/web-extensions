@@ -28,7 +28,7 @@ class Runtime {
   // lastError
 
   // The ID of the extension/app.
-  // id:string
+  id:string
 
   constructor() {
     /**
