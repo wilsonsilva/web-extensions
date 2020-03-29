@@ -7,7 +7,7 @@
 class BrowserAction {
   mockData:Object
 
-  constructor() {
+  constructor () {
     this.mockData = {
       badge: { text: '', backgroundColor: null },
       tooltip: { title: '', tabId: null },
@@ -24,7 +24,7 @@ class BrowserAction {
    * @param {integer=} details.tabId Limits the change to when a particular tab is selected. Automatically
    * resets when the tab is closed.
    */
-  setTitle(details:Object):void {
+  setTitle (details:Object):void {
     this.mockData.tooltip.title = details.title
     this.mockData.tooltip.tabId = details.tabId
   }
@@ -49,7 +49,7 @@ class BrowserAction {
    * @param {integer=} details.tabId Limits the change to when a particular tab is selected. Automatically
    * resets when the tab is closed.
    */
-  setBadgeText(details:Object):void {
+  setBadgeText (details:Object):void {
     this.mockData.badge.text = details.text
     this.mockData.badge.tabId = details.tabId
   }
@@ -67,7 +67,7 @@ class BrowserAction {
    * @param {integer=} details.tabId Limits the change to when a particular tab is selected. Automatically
    * resets when the tab is closed.
    */
-  setBadgeBackgroundColor(details:Object):void {
+  setBadgeBackgroundColor (details:Object):void {
     this.mockData.badge.backgroundColor = details.color
     this.mockData.badge.tabId = details.tabId
   }
@@ -81,7 +81,7 @@ class BrowserAction {
   // disable(tabId:number) {
   // }
 
-  static get AVAILABLE_SINCE_VERSION():number {
+  static get AVAILABLE_SINCE_VERSION ():number {
     return 16
   }
 }

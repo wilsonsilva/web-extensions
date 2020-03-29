@@ -24,7 +24,7 @@ module.exports = {
   // collectCoverageFrom: undefined,
 
   // The directory where Jest should output its coverage files
-  coverageDirectory: "coverage",
+  coverageDirectory: 'coverage',
 
   // An array of regexp pattern strings used to skip coverage collection
   // coveragePathIgnorePatterns: [
@@ -88,7 +88,7 @@ module.exports = {
   // locations to search when resolving modules. Use the <rootDir> string token to include the path to your project's
   // root directory. Example: ["<rootDir>/app/"].
   modulePaths: [
-    "src"
+    'src'
   ],
 
   // Activates notifications for test results
@@ -175,9 +175,9 @@ module.exports = {
 
   // A map from regular expressions to paths to transformers
   transform: {
-    "^.+\\.[t|j]sx?$": "babel-jest",
-    "^.+\\.js(?:\\.flow)?$": "jest-flow-transform"
-  },
+    '^.+\\.[t|j]sx?$': 'babel-jest',
+    '^.+\\.js(?:\\.flow)?$': 'jest-flow-transform'
+  }
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
   // transformIgnorePatterns: [],
@@ -193,4 +193,4 @@ module.exports = {
 
   // Whether to use watchman for file crawling
   // watchman: true,
-};
+}

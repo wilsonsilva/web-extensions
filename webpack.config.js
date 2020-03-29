@@ -1,10 +1,10 @@
 const path = require('path')
-const SRC  = path.join(__dirname, 'src')
+const SRC = path.join(__dirname, 'src')
 const DIST = path.join(__dirname, 'lib')
 
-config = {
+const config = {
   entry: {
-    main: './src/index.js',
+    main: './src/index.js'
   },
   output: {
     path: DIST,
@@ -35,6 +35,6 @@ config = {
       root: '_'
     }
   }
-};
+}
 
 module.exports = config

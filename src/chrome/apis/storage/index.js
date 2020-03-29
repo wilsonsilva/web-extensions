@@ -12,14 +12,14 @@ class Storage {
   managed:StorageArea
   onChanged:Signal
 
-  constructor() {
+  constructor () {
     this.sync = new StorageArea()
     this.local = new StorageArea()
     this.managed = new StorageArea()
     this.onChanged = new Signal()
   }
 
-  static get AVAILABLE_SINCE_VERSION():number {
+  static get AVAILABLE_SINCE_VERSION ():number {
     return 20
   }
 }

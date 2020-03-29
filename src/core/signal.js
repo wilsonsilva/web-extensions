@@ -5,9 +5,9 @@
  * subscribe to real objects, not to string-based channels. Signals are inspired by C# events and signals/slots in Qt.
  */
 class Signal {
-  listeners:Array<Function>
+  listeners: Array<Function>
 
-  constructor() {
+  constructor () {
     this.listeners = []
   }
 
@@ -17,7 +17,7 @@ class Signal {
    *
    * @param {Function} callback The function to be called when an event is dispatched.
    */
-  addListener(callback:Function) {
+  addListener (callback: Function) {
     this.listeners.push(callback)
   }
 
@@ -27,14 +27,14 @@ class Signal {
    *
    * @param {Function} callback The function to be called when an event is dispatched.
    */
-  remove(callback:Function) {
+  remove (callback: Function) {
     this.listeners = this.listeners.filter(listener => listener.toString() !== callback.toString())
   }
 
   /**
    * Similar to remove(), but removes all listeners from the signal object.
    */
-  removeAll() {
+  removeAll () {
     this.listeners = []
   }
 
@@ -43,7 +43,7 @@ class Signal {
    *
    * @param data
    */
-  dispatch(data:any) {
+  dispatch (data: any) {
     this.listeners.forEach(listener => listener(data))
   }
 }

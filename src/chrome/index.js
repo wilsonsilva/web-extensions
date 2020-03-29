@@ -16,7 +16,7 @@ class Chrome {
   storage:Storage
   browserAction:BrowserAction
 
-  constructor() {
+  constructor () {
     this.alarms = new Alarms()
     this.storage = new Storage()
     this.runtime = new Runtime()

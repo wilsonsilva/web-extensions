@@ -30,7 +30,7 @@ class Runtime {
   // The ID of the extension/app.
   id:string
 
-  constructor() {
+  constructor () {
     /**
      * Fired when the extension is first installed, when the extension is updated to a new version,
      * and when Chrome is updated to a new version.
@@ -49,7 +49,7 @@ class Runtime {
    *
    * @param {Function} callback
    */
-  getBackgroundPage(callback:Function):void {
+  getBackgroundPage (callback:Function):void {
     callback()
   }
 
@@ -58,7 +58,7 @@ class Runtime {
    *
    * @param {string} path A path to a resource within an app/extension expressed relative to its install directory.
    */
-  getURL(path:string):string {
+  getURL (path:string):string {
     return `chrome-extension://${this.id}/${path}`
   }
 
@@ -76,7 +76,7 @@ class Runtime {
    *
    * @param callback
    */
-  openOptionsPage(callback:Function) {
+  openOptionsPage (callback:Function) {
     callback()
   }
 
@@ -96,7 +96,7 @@ class Runtime {
   // getPlatformInfo − chrome.runtime.getPlatformInfo(function callback)
   // getPackageDirectoryEntry − chrome.runtime.getPackageDirectoryEntry(function callback)
 
-  static get AVAILABLE_SINCE_VERSION():number {
+  static get AVAILABLE_SINCE_VERSION ():number {
     return 16
   }
 }
