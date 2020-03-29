@@ -71,7 +71,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Chrome's proccesses dev API
 - Chrome's signedInDevice dev API
 
-## 0.2.0 - 2017-09-06
+## [0.2.1] - 2020-03-29
+### Fixed
+- Fixed the error `TypeError: Found non-callable @@iterator` in `StorageArea#set`.
+- Fixed the changelog links
+
+## [0.2.0] - 2017-09-06
 ### Added
 - Chrome's runtime API
 
@@ -81,7 +86,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## Fixed
 - The loading of the library
 
-## 0.1.0 - 2017-08-31
+## [0.1.0] - 2017-08-31
 ### Added
 - Initial project scaffold with webpack, eslint, flow, jest and babel
 - Firefox's initial scaffold
@@ -89,3 +94,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Chrome's Alarms API
 - Chrome's Browser Action API
 - Chrome's Storage API
+
+[Unreleased]: https://github.com/wilsonsilva/web-extensions/compare/v0.2.1...HEAD
+[0.2.1]: https://github.com/wilsonsilva/web-extensions/compare/v0.2.0...v0.2.1
+[0.2.0]: https://github.com/wilsonsilva/web-extensions/compare/v0.1.0...v0.2.0
+[0.1.0]: https://github.com/wilsonsilva/web-extensions/releases/tag/v0.1.0
