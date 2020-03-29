@@ -50,6 +50,7 @@ class Runtime {
    * @param {Function} callback
    */
   getBackgroundPage(callback:Function):void {
+    callback()
   }
 
   /**
@@ -76,6 +77,7 @@ class Runtime {
    * @param callback
    */
   openOptionsPage(callback:Function) {
+    callback()
   }
 
   // missing methods
@@ -88,7 +90,8 @@ class Runtime {
   // restartAfterDelay − chrome.runtime.restartAfterDelay(integer seconds, function callback)
   // connect − Port chrome.runtime.connect(string extensionId, object connectInfo)
   // connectNative − Port chrome.runtime.connectNative(string application)
-  // sendMessage − chrome.runtime.sendMessage(string extensionId, any message, object options, function responseCallback)
+  // sendMessage − chrome.runtime.sendMessage(string extensionId, any message, object options,
+  //   function responseCallback)
   // sendNativeMessage − chrome.runtime.sendNativeMessage(string application, object message, function responseCallback)
   // getPlatformInfo − chrome.runtime.getPlatformInfo(function callback)
   // getPackageDirectoryEntry − chrome.runtime.getPackageDirectoryEntry(function callback)

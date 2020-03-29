@@ -1,5 +1,5 @@
 import Alarms from '../apis/alarms'
-import Chrome from '../../chrome'
+import Chrome from '..'
 import BrowserAction from '../apis/browser_action'
 import Storage from '../apis/storage'
 

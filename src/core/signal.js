@@ -28,9 +28,7 @@ class Signal {
    * @param {Function} callback The function to be called when an event is dispatched.
    */
   remove(callback:Function) {
-    this.listeners = this.listeners.filter(listener =>
-      listener.toString() !== callback.toString()
-    )
+    this.listeners = this.listeners.filter(listener => listener.toString() !== callback.toString())
   }
 
   /**
