@@ -8,8 +8,8 @@ import Signal from '../../../core/signal'
  * to fully-qualified URLs.
  */
 class Runtime {
-  mockData:Object
-  onInstalled:Signal
+  mockData: Object
+  onInstalled: Signal
 
   // missing events
   // onStartup
@@ -28,7 +28,7 @@ class Runtime {
   // lastError
 
   // The ID of the extension/app.
-  id:string
+  id: string
 
   constructor () {
     /**
@@ -38,8 +38,7 @@ class Runtime {
      */
     this.onInstalled = new Signal()
 
-    this.mockData = {
-    }
+    this.mockData = {}
   }
 
   /**
@@ -49,7 +48,7 @@ class Runtime {
    *
    * @param {Function} callback
    */
-  getBackgroundPage (callback:Function):void {
+  getBackgroundPage (callback: Function): void {
     callback()
   }
 
@@ -58,7 +57,7 @@ class Runtime {
    *
    * @param {string} path A path to a resource within an app/extension expressed relative to its install directory.
    */
-  getURL (path:string):string {
+  getURL (path: string): string {
     return `chrome-extension://${this.id}/${path}`
   }
 
@@ -76,7 +75,7 @@ class Runtime {
    *
    * @param callback
    */
-  openOptionsPage (callback:Function) {
+  openOptionsPage (callback: Function) {
     callback()
   }
 
@@ -96,7 +95,7 @@ class Runtime {
   // getPlatformInfo − chrome.runtime.getPlatformInfo(function callback)
   // getPackageDirectoryEntry − chrome.runtime.getPackageDirectoryEntry(function callback)
 
-  static get AVAILABLE_SINCE_VERSION ():number {
+  static get AVAILABLE_SINCE_VERSION (): number {
     return 16
   }
 }

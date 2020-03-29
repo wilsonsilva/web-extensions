@@ -7,10 +7,10 @@ import StorageArea from './types/storage_area'
  * Use the chrome.storage API to store, retrieve, and track changes to user data.
  */
 class Storage {
-  sync:StorageArea
-  local:StorageArea
-  managed:StorageArea
-  onChanged:Signal
+  sync: StorageArea
+  local: StorageArea
+  managed: StorageArea
+  onChanged: Signal
 
   constructor () {
     this.sync = new StorageArea()
@@ -19,7 +19,7 @@ class Storage {
     this.onChanged = new Signal()
   }
 
-  static get AVAILABLE_SINCE_VERSION ():number {
+  static get AVAILABLE_SINCE_VERSION (): number {
     return 20
   }
 }

@@ -11,10 +11,10 @@ import {
  * Web Extensions API for Chrome.
  */
 class Chrome {
-  alarms:Alarms
-  runtime:Runtime
-  storage:Storage
-  browserAction:BrowserAction
+  alarms: Alarms
+  runtime: Runtime
+  storage: Storage
+  browserAction: BrowserAction
 
   constructor () {
     this.alarms = new Alarms()

@@ -36,7 +36,7 @@ describe('#get', () => {
 
     it('returns an empty object when no keys are found', () => {
       storageArea.get(['missigno', 'missing'], (retrieved) => {
-        expect(retrieved).toEqual({ })
+        expect(retrieved).toEqual({})
       })
     })
   })

@@ -7,13 +7,13 @@ import Signal from '../../../../core/signal'
 
 // @flow
 class StorageArea {
-  get:Function
-  getBytesInUse:Function
-  set:Function
-  remove:Function
-  clear:Function
-  onChanged:Signal
-  mockData:Object
+  get: Function
+  getBytesInUse: Function
+  set: Function
+  remove: Function
+  clear: Function
+  onChanged: Signal
+  mockData: Object
 
   constructor () {
     /**
@@ -34,7 +34,7 @@ class StorageArea {
    * The callback parameter should be a function that looks like this:
    * function(object items) {...};
    */
-  get (keys:string | string[] | Object, callback:?Function):void {
+  get (keys: string | string[] | Object, callback: ?Function): void {
     if (isArray(keys)) {
       callback(_.pick(this.mockData, keys))
     } else if (isEmpty(keys) && (isArray(keys) || isObject(keys))) {
@@ -54,12 +54,12 @@ class StorageArea {
     }
   }
 
-  getBytesInUse (keys:string | string[], callback:?Function):void {
+  getBytesInUse (keys: string | string[], callback: ?Function): void {
     callback()
     return undefined
   }
 
-  set (items:Object, callback:?Function):Function {
+  set (items: Object, callback: ?Function): Function {
     Object.assign(this.mockData, items)
 
     if (callback) {
@@ -69,12 +69,12 @@ class StorageArea {
     return _.noop
   }
 
-  remove (keys:string | string[], callback:Function):void {
+  remove (keys: string | string[], callback: Function): void {
     callback()
     return undefined
   }
 
-  clear (callback:?Function):void {
+  clear (callback: ?Function): void {
     this.mockData = {}
 
     if (callback) {
