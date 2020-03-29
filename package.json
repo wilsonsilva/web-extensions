@@ -7,10 +7,11 @@
     "start": "webpack --watch",
     "clean": "rm -rf ./lib",
     "build": "yarn webpack --env build",
-    "lint": "eslint src",
-    "lint:fix": "eslint --fix src",
-    "qa": "yarn eslint src && yarn flow && yarn jest",
-    "test-ci": "yarn flow && yarn jest"
+    "lint": "standard --parser babel-eslint --plugin flowtype --env jest",
+    "lint:fix": "yarn lint --fix",
+    "qa": "yarn lint && yarn flow && yarn jest",
+    "test-ci": "yarn flow && yarn jest",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -29,19 +30,23 @@
     "babel-eslint": "^10.1.0",
     "babel-jest": "^25.2.3",
     "eslint": "^6.8.0",
-    "eslint-config-airbnb-base": "^14.1.0",
-    "eslint-config-airbnb-standard": "^3.1.0",
     "eslint-plugin-flowtype": "^4.7.0",
-    "eslint-plugin-import": "^2.20.1",
     "flow": "^0.2.3",
     "flow-bin": "^0.121.0",
     "flow-remove-types": "^2.121.0",
     "jest": "^25.2.3",
     "jest-flow-transform": "^1.0.1",
     "remove-flow-types-loader": "^1.1.0",
+    "standard": "^14.3.3",
     "webpack": "^4.42.1"
   },
   "dependencies": {
     "lodash": "^4.17.15"
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "plugins": [
+      "flowtype"
+    ]
   }
 }
