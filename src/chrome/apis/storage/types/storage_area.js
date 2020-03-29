@@ -60,7 +60,7 @@ class StorageArea {
   }
 
   set(items:Object, callback:?Function):Function {
-    Object.assign(this.mockData, ...items)
+    Object.assign(this.mockData, items)
 
     if (callback) {
       callback()
