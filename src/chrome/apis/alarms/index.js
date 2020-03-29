@@ -1,15 +1,21 @@
 // @flow
 
 import Alarm from './types/alarm'
+import Signal from '../../../core/signal'
 
 /**
  * Use the chrome.alarms API to schedule code to run periodically or at a specified time in the future.
  */
 class Alarms {
+  /**
+   * Fired when an alarm has elapsed. Useful for event pages.
+   */
+  onAlarm: Signal
   mockData: Object
 
   constructor () {
     this.mockData = {}
+    this.onAlarm = new Signal()
   }
 
   /**
